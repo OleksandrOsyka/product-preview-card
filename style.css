@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap');
+
+:root{
+    --dark-cyan: hsl(158, 36%, 37%);
+    --cream: hsl(30, 38%, 92%);
+    --dark-blue: hsl(212, 21%, 14%);
+    --dark-grey: hsl(228, 12%, 48%);
+}
+
+* {
+    margin : 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.background {
+    background-color: var(--cream);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.product-card {
+    background-color: white;
+    width:  clamp(535px,40%,50vw);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+.left {
+    background-image: url(assets/image-product-desktop.jpg);
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.right {
+    padding: 2rem;
+}
+
+.product-type {
+    color: var(--dark-grey);
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: .75rem;
+    letter-spacing: .5rem;
+}
+
+.right h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    font-family: 'Fraunces', serif;
+    color: var(--dark-blue);
+    line-height: 2rem;
+    padding: 1.25rem 0;
+}
+
+.right p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: .875rem;
+    color: var(--dark-grey);
+    line-height: 1.25rem;
+    letter-spacing: .025rem;
+    text-align: left;
+}
+
+.price {
+    font-size: 2rem;
+    font-weight: 700;
+    font-family: 'Fraunces', serif;
+    color: var(--dark-cyan);
+    padding: 1.5rem 0;
+    display: inline-block;
+}
+
+.price::after{
+    content: "$169.99";
+    font-size: .875rem;
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: line-through;
+    color: var(--dark-grey);
+    padding: 0 1rem;
+    position: relative;
+    bottom: .5rem;
+}
+
+.button-addToCart {
+    display: block;
+    text-decoration: none;
+    background-color: var(--dark-cyan);
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    text-align: center;
+    padding: .75rem 0;
+    border-radius: .5rem;
+}
+
+@media only screen and (max-width: 600px) {
+    .product-card {
+        grid-template-columns: 1fr;
+        width: 90%;
+    }
+
+    .left {
+        background-image: url(assets/image-product-mobile.jpg);
+        background-size:cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 35vh;
+    }
+
+    .right {
+        padding: 1.5rem;
+    }
+}
