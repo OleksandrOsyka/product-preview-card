@@ -29,7 +29,7 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL: [Live site URL](https://osykaoleksandr.github.io/product-preview-card/)
+- Live Site URL: [Live site URL](https://oleksandrosyka.github.io/product-preview-card/)
 
 ## My process
 
